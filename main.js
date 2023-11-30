@@ -2,40 +2,50 @@
  
 
  //Variables 
-
+const board = [
+    [0, 1, 2, 3, 4, 5],
+    [0, 1, 2, 3, 4, 5],
+    [0, 1, 2, 3, 4, 5],
+    [0, 1, 2, 3, 4, 5],
+    [0, 1, 2, 3, 4, 5],
+]
 
 const numberOfMines = 5;
-//let minesLocation =   
-
-let gameOver = false;
-
-//function init (){
-// board = [
-//     [0,0,0,0,0],
-//     [0,0,0,0,0],
-//     [0,0,0,0,0],
-//     [0,0,0,0,0],
-//     [0,0,0,0,0],
-// ]
-//}
 
 
- //Function to start game on click 
+//let gameOver = false
+
+function setMines (){
+let.minesLocation = [0][1]; //testing if alert will come up if I click on c0r4
+alert("There is a mine!");
+
+}
+
+function startGame (){
+    setMines ();
+
+}
+
+ 
 const boxes = document.querySelectorAll('.box');
 boxes.forEach(box => {
-    box.addEventListener('click', function handleclick(e) {
+    box.addEventListener('click', function boxClicked(e) {
         console.log('box clicked', e );
         box.setAttribute('style', 'background-color: lightgray');
     });
 });
 
 
+
+
 function boxClicked () {
+    let box = this;
+
 
 
 }
 
- 
+
 
  
 
