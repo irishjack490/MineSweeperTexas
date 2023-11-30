@@ -1,11 +1,46 @@
  
- //DOM style grid property 
+ 
 
- //Manipulate DOM to render game upon loading browser 
+ //Variables 
 
- //Math function for computer to set 5 mines randomly with numbers 
+
+const numberOfMines = 5;
+//let minesLocation =   
+
+let gameOver = false;
+
+//function init (){
+// board = [
+//     [0,0,0,0,0],
+//     [0,0,0,0,0],
+//     [0,0,0,0,0],
+//     [0,0,0,0,0],
+//     [0,0,0,0,0],
+// ]
+//}
+
+
+ //Function to start game on click 
+const boxes = document.querySelectorAll('.box');
+boxes.forEach(box => {
+    box.addEventListener('click', function handleclick(e) {
+        console.log('box clicked', e );
+        box.setAttribute('style', 'background-color: lightgray');
+    });
+});
+
+
+function boxClicked () {
+
+
+}
+
+ 
+
+ 
 
  //Event listeners for click of the player
+
 
  //Player will click on a square, a mine or a number will appear, if the square contains a mine the game will be over
  //If the square displays a number, player will have the change to click on another square
