@@ -1,3 +1,4 @@
+ 
  //DOM style grid property 
 
  //Manipulate DOM to render game upon loading browser 
