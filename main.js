@@ -1,17 +1,20 @@
- //DOM style grid property, size of grid: 4 rows, 4 columns, total of 16 same size squares
+ //DOM style grid property 
 
- //Generate 5 mines in random squares, generate numbers. 
- //These must be non-visible until player clicks on the squares
+ //Manipulate DOM to render game upon loading browser 
 
- //Render game upon loading browser
+ //Math function for computer to set 5 mines randomly with numbers 
 
- //Listen for player's click 
+ //Event listeners for click of the player
 
- //If  player uncovers a mine the game will be over
- //If player uncovers a number, player will have the chance to click on another square
- 
- //set timer of 5 minutes to allow the player to complete the game, if mine is hit this, timer will stop 
+ //Player will click on a square, a mine or a number will appear, if the square contains a mine the game will be over
+ //If the square displays a number, player will have the change to click on another square
 
- //End game if player hits a mine
+ //Set timer upon first click of 5 minutes to allow the player to complete the game, if the player gets a mine th
 
- //Give player the option to play again or quit 
+ //Function to determine if player hit a mine or has another chance
+
+ //Display the numbers that give the hint that a mine is close by (we could use 1 and 2 since the grid is 4x4)
+
+ //Function to end game if player lost
+
+ //Give player the option to play again 
