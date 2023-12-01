@@ -8,21 +8,23 @@ body {
 h1 {
     text-align:center;
     margin: auto;
-    width: 50%;
-    padding: 2%;
+
 }
 
 #board {
-    display: grid;
-    width: 300px;
-    height: 300px;
-    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 230px;
+    height: 230px;
+    margin: 0 auto;
     border: 10px solid lightslategray;
+    background-color: white;
 }
 #board div {
-    width: 40px;
-    height" 40px; 
-    border: 2px solid lightslategray;
+    width: 42px;
+    height: 42px; 
+    border: 2px solid rgb(122, 117, 117);
 
+
+    
 }
-

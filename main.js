@@ -1,10 +1,10 @@
  
- 
+
 
  //Variables 
-
-let rows = 5;
-let columns = 5; 
+const board = [];
+const rows = 5;
+const columns = 5; 
 const numberOfMines = 5;
 let minesLocation = [];
 let boxesClicked = 0;
@@ -12,35 +12,40 @@ let boxesClicked = 0;
 const gameOver = false;
 
 
-
+window.onload = function(){
+    startGame();
+}
 function setMines () { // I will change this to math random function, this is just for testing coordinates in array
-   minesLocation.push();
-   minesLocation.push();
-   minesLocation.push();
-
-
+   minesLocation.push("0-0");
+   minesLocation.push("2-2");
+   minesLocation.push("0-1");//these passed the test, changing to randor generator
 }
 //Create board with rows and columns
- function startGame(){
-    const board = [];
-    for(let i = 0; i < rows.length; i++){
-    let rows = [];
-      for(let j = 0; j < columns.length; i++){
+ function startGame() {
+    setMines();
+    //create div tags using JS
+    for (let i = 0; i < rows; i++){
+    let row = [];
+      for (let j = 0; j < columns; j++){
         let box = document.createElement("div");
-        document.getElementById(board).append(box);
-        rows.push(box);   //boxes not rendering yet 
+        box.id = i.toString() + "-" + j.toString();
+        box.addEventListener('click', boxClicked);
+        document.getElementById("board").append(box);
+        row.push(box);   
     }
     board.push(row);
   } 
-
+ console.log(board);
 }
 
 function boxClicked () {
-
-if (minesLocation.includes(box.id)){
-    alert("GAME OVER");
+ let box = this; 
+ if (minesLocation.includes(box.id)) {
+    alert("GAMER OVER");
     gameOver = true;
     return;
-   }
+ }
+
 }
+
 
