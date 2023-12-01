@@ -1,6 +1,4 @@
-* {
-    box-sizing: border-box;
-}
+
 
 body {
     background-color: #c5d9ed;
@@ -16,17 +14,15 @@ h1 {
 
 #board {
     display: grid;
-    grid-template-columns: repeat(5, 10vmin);
-    grid-template-rows: repeat(5, 10vmin);
-    margin-top: 2vmin;
-    width: 25%;
+    width: 300px;
+    height: 300px;
     margin: auto;
-    
+    border: 10px solid lightslategray;
 }
+#board div {
+    width: 40px;
+    height" 40px; 
+    border: 2px solid lightslategray;
 
-.box {
-    box-sizing: border-box;
-    border: 3px solid gray; 
-    background-color: #f0f0f1;
-   } 
+}
 
