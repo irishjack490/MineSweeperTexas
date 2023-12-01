@@ -15,11 +15,22 @@ const gameOver = false;
 window.onload = function(){
     startGame();
 }
-function setMines () { // I will change this to math random function, this is just for testing coordinates in array
-   minesLocation.push("0-0");
-   minesLocation.push("2-2");
-   minesLocation.push("0-1");//these passed the test, changing to randor generator
-}
+function setMines () { 
+ while(setMines < numberOfMines){
+    const row = Math.floor(Math.random () * rows);
+    const column = Math.floor(Math.random ()* columns);
+    if(!board[row][column].isMine){
+        board[row][column].isMine=true;
+        setMines++;
+    }
+
+  }
+  
+ }
+// minesLocation.push("0-0");
+//    minesLocation.push("2-2");
+//    minesLocation.push("0-1");//these passed the test, changing to random generator
+
 //Create board with rows and columns
  function startGame() {
     setMines();
@@ -40,7 +51,7 @@ function setMines () { // I will change this to math random function, this is ju
 
 function boxClicked () {
  let box = this; 
- if (minesLocation.includes(box.id)) {
+ if (minesLocation.isMine) {
     alert("GAMER OVER");
     gameOver = true;
     return;
