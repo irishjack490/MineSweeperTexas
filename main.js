@@ -17,13 +17,13 @@ window.onload = function(){
 }
 function setMines () { 
 let minesRemaining = 0;
-while(minesRemaining < numberOfMines){
+while (minesRemaining < numberOfMines){
 const row = Math.floor(Math.random () * rows);
 const column = Math.floor(Math.random ()* columns);
-       let id = row.toString + "-" + column.toString; 
+       let id = row.toString () + "-" + column.toString(); 
  if (!minesLocation.includes(id)){
     minesLocation.push(id);
-    minesRemaining =+ 1;
+    minesRemaining += 1;
     }
        
   }
@@ -50,71 +50,47 @@ const column = Math.floor(Math.random ()* columns);
 
 function boxClicked() {
   
- if (minesLocation.includes(box.id)) {
+  let currentBox = this;
+  let boxId = currentBox.id; 
+ if (minesLocation.includes(boxId)) {
     gameOver = true;
     revealMines();
     return;
- }
+  }else {
+    let count = countAdjacentMines (boxId);
+    currentBox.innerText = count; 
+    currentBox.style.backgroundColor = "lightgray";
+  }
 
+}
+
+
+function countAdjacentMines(boxId){
+   let count = 0;
+   const [row, col] = boxId.split("-").map(Number);
+
+   for(let i = row -1; i <= row +1; i++){
+    for (let j = col -1; j <= col +1; j++){
+      if(i>= 0 && i < rows && j>= 0 && j <columns){
+        let neighborId = i.toString() + "-" + j.toString();
+        if(minesLocation.includes(neighborId)){
+          count++;
+        }
+      }
+    }
+   }
+   return count;
 }
 
 function revealMines(){
-    for (let i = 0; i < rows; i++){
-        for (let j = 0; j < columns; j++){
-            let box = board[i][j];
-            if (minesLocation.includes(box.id)){
-                box.innerText = "💣";
-                box.style.backgroundColor = "yellow";
-            } else {
-               if (!board[i][j].isOpen){
-                revealCell(i,j);
-               }
-            }
-        }
-    }
+  for (let i = 0; i < rows; i++){
+      for (let j = 0; j < columns; j++){
+          let box = board[i][j];
+          if (minesLocation.includes(box.id)){
+              box.innerText = "💣";
+              box.style.backgroundColor = "yellow";
+          } 
+      }
+   }
 }
-function revealCell (){
-  const box = document.querySelectorAll('clicked-box');
-  board[i][j].isOpen = true; 
 
-  const adjacentMines = countAdjacentMines (i,j);
-  if (adjacentMines > 0){
-    box.textContent = adjacentMines;
-    box.classList.add('number');
-    box.classList.add('opened');
-  } else 
-  box.classList.add('opened');
-  const neighbors = getNeighbors(i, j);
-
-  for (const neighbor of neighbors){
-    const { i: neighborRow, j: neighborColumn } = neighbor; 
-    if(!board[neighborRow][neighborColumn].isOpen){
-      revealCell(neighborRow,neighborColumn);
-    }
-
-  }
-
-}
-function countAdjacentMines(i, j){
-  const neighbors = getNeighbors (i, j);
-  let count = 0;
-
-  for (const neighbor of neighbors){
-    const { i: neighborRow, j: neighborColumn } = neighbor; 
-    if(!board.includes(box.id)){
-      count++;
-    }
-  }
-  return count;
-}
-function getNeighbors(i,j){
-  const neighbors = [];
-  for (let i = i - 1; i <= i + 1; i++){
-    for(let j = j -1; j <= j +1 ; j++){
-      neighbors.push(i,j);
-      
-    }
-    
-  }
-  return neighbors;
-}

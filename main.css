@@ -18,7 +18,7 @@ h1 {
     height: 230px;
     margin: 0 auto;
     border: 10px solid lightslategray;
-    background-color: white;
+    background-color: #DCDCDC;
 }
 #board div {
     width: 42px;
