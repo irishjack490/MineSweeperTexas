@@ -14,13 +14,12 @@ The player must be able to do the following:
  Click on any square in the table 
  Be able to see if they clicked on a mine OR
  Be able to see a display of a number or group of numbers giving the player a hint of where the mines may be located
- Be able to see the time count
- Be able to see the smiley change it's facial expression so surprised everytime a square is clicked
+ 
  Be given the option to start new game upon wining or losing previous game
 
  Pseudo Code:
 
- //DOM style grid property, size of grid: 4 rows, 4 columns, total of 16 same size squares
+ //DOM style grid property, size of grid: 5 rows, 5 columns, total of 25 same size squares
 
  //Generate 5 mines in random squares, generate numbers. 
  //These must be non-visible until player clicks on the squares

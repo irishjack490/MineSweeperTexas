@@ -24,7 +24,9 @@ h1 {
     width: 42px;
     height: 42px; 
     border: 2px solid rgb(122, 117, 117);
-
-
     
+}
+
+.box.opened {
+    background-color: #ddd;
 }
