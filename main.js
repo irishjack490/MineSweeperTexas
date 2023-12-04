@@ -3,9 +3,9 @@
 
  //Variables 
 let board = [];
-const rows = 5;
-const columns = 5; 
-const numberOfMines = 5;
+const rows = 8;
+const columns = 8; 
+const numberOfMines = 10;
 let minesLocation = [];
 let boxesClicked = 0;
 
@@ -25,13 +25,13 @@ const column = Math.floor(Math.random ()* columns);
     minesLocation.push(id);
     minesRemaining += 1;
     }
-       
   }
-
-}
+       
+ }
 
 //Create board with rows and columns
  function startGame() {
+  restartGame();
   setMines();
     //create div tags using JS
     for (let i = 0; i < rows; i++){
@@ -49,7 +49,10 @@ const column = Math.floor(Math.random ()* columns);
 }
 
 function boxClicked() {
-  
+  if(gameOver) {
+    return;
+  }
+
   let currentBox = this;
   let boxId = currentBox.id; 
  if (minesLocation.includes(boxId)) {
@@ -61,7 +64,7 @@ function boxClicked() {
     currentBox.innerText = count; 
     currentBox.style.backgroundColor = "lightgray";
   }
-
+  
 }
 
 
@@ -89,8 +92,19 @@ function revealMines(){
           if (minesLocation.includes(box.id)){
               box.innerText = "💣";
               box.style.backgroundColor = "yellow";
+              
           } 
       }
    }
 }
+function restartGame (){
+  board = [];
+  minesLocation = [];
+  boxesClicked = 0;
+  gameOver = false; 
+
+  document.getElementById("board").innerHTML = " "; 
+
+}
+  document.getElementById("restart-button").addEventListener("click", startGame);
 

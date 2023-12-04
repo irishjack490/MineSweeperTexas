@@ -14,19 +14,31 @@ h1 {
 #board {
     display: flex;
     flex-wrap: wrap;
-    width: 230px;
-    height: 230px;
+    width: 490px;
+    height: 500px;
     margin: 0 auto;
     border: 10px solid lightslategray;
     background-color: #DCDCDC;
 }
 #board div {
-    width: 42px;
-    height: 42px; 
-    border: 2px solid rgb(122, 117, 117);
+    width: 55px;
+    height: 55px; 
+    border: 3px solid lightslategray;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 25px; 
     
 }
 
 .box.opened {
     background-color: #ddd;
 }
+
+button {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position: absolute;
+    right: 100px;
+    top: 70px;
+    
+}
+
