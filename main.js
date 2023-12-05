@@ -38,7 +38,7 @@ const column = Math.floor(Math.random ()* columns);
     let row = [];
       for (let j = 0; j < columns; j++){
         let box = document.createElement("div");
-        box.id = i.toString() + "-" + j.toString();
+        box.id = i.toString() + "-" + j.toString(); //creating id for the boxes in the array to manipulate them later in the code
         box.addEventListener('click', boxClicked);
         document.getElementById("board").append(box);
         row.push(box);   
@@ -62,7 +62,7 @@ function boxClicked() {
   }else {
     let count = countAdjacentMines (boxId);
     currentBox.innerText = count; 
-    currentBox.style.backgroundColor = "lightgray";
+    
   }
   
 }
@@ -71,12 +71,12 @@ function boxClicked() {
 function countAdjacentMines(boxId){
    let count = 0;
    const [row, col] = boxId.split("-").map(Number);
-
+   //need to add code here to change the color o the number map() produces
    for(let i = row -1; i <= row +1; i++){
     for (let j = col -1; j <= col +1; j++){
-      if(i>= 0 && i < rows && j>= 0 && j <columns){
+      if(i>= 1 && i < rows && j>= 1 && j < columns){
         let neighborId = i.toString() + "-" + j.toString();
-        if(minesLocation.includes(neighborId)){
+            if(minesLocation.includes(neighborId)){
           count++;
         }
       }
@@ -92,7 +92,9 @@ function revealMines(){
           if (minesLocation.includes(box.id)){
               box.innerText = "💣";
               box.style.backgroundColor = "yellow";
-              
+              document.getElementById("header").innerHTML = "Game Over" + "😵";
+            
+
           } 
       }
    }
@@ -104,6 +106,7 @@ function restartGame (){
   gameOver = false; 
 
   document.getElementById("board").innerHTML = " "; 
+  document.getElementById("header").innerHTML = "Welcome to Minesweeper" + "🤠";
 
 }
   document.getElementById("restart-button").addEventListener("click", startGame);
