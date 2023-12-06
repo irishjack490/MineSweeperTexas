@@ -25,7 +25,7 @@ const column = Math.floor(Math.random ()* columns);
     minesLocation.push(id);
     minesRemaining += 1;
     }
-  }
+   }
        
  }
 
@@ -62,12 +62,20 @@ function boxClicked() {
   }else {
     let count = countAdjacentMines (boxId);
     currentBox.innerText = count; 
+    currentBox.style.color = numberColors[count];
     
   }
   
 }
-//added array with colors I want 
-const numberColors = ["red", "blue", "green", "magenta", "orange", "purple"]
+//const numberColors = ["red", "blue", "green", "magenta", "orange", "purple"]//converted to an object 
+const numberColors = {
+  0: "red",
+  1: "blue",
+  2: "green",
+  3: "magenta",
+  4: "orange",
+  5: "purple"
+}
 function countAdjacentMines(boxId){
 
    let count = 0;
@@ -83,13 +91,13 @@ function countAdjacentMines(boxId){
       }
     }
   }
-   const numberElement = document.createElement("span");
-   numberElement.className = "mine-number";
-   numberElement.textContent = count; 
+  //  const numberElement = document.createElement("span");
+  //  numberElement.className = "mine-number";
+  //  numberElement.textContent = count; 
    
-   const colorIndex = count % numberColors.length;
-   numberElement.style.color = numberColors[colorIndex];//choose color from array by index
-   document.getElementById("board").appendChild(numberElement); 
+  //  const colorIndex = count % numberColors.length;
+  //  numberElement.style.color = numberColors[colorIndex];//choose color from array by index
+  //  document.getElementById("board").appendChild(numberElement); 
 
    return count; 
 }
