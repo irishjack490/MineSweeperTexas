@@ -19,20 +19,18 @@ The player must be able to do the following:
 
  Pseudo Code:
 
- //DOM style grid property, size of grid: 5 rows, 5 columns, total of 25 same size squares
+ //Create a board with 8 rows, 8 columns, total of 64 same size boxes
 
- //Generate 5 mines in random squares, generate numbers. 
- //These must be non-visible until player clicks on the squares
+ //Add code that generates 10 mines in random squares
+ /Add code that displays a number for the adjacent mines, these must be non-visible until player clicks on the squares
 
  //Render game upon loading browser
 
- //Listen for player's click 
+ //Creat function to listen for player's click 
 
  //If  player uncovers a mine the game will be over
  //If player uncovers a number, player will have the chance to click on another square
  
- //set timer of 5 minutes to allow the player to complete the game, if mine is hit this, timer will stop 
-
  //End game if player hits a mine
 
- //Give player the option to play again or quit 
+ //Set up button if player wants to play again  

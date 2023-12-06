@@ -66,24 +66,36 @@ function boxClicked() {
   }
   
 }
-
-
+//added array with colors I want 
+const numberColors = ["red", "blue", "green", "magenta", "orange", "purple"]
 function countAdjacentMines(boxId){
+
    let count = 0;
    const [row, col] = boxId.split("-").map(Number);
-   //need to add code here to change the color o the number map() produces
+   
    for(let i = row -1; i <= row +1; i++){
     for (let j = col -1; j <= col +1; j++){
-      if(i>= 1 && i < rows && j>= 1 && j < columns){
+      if(i >= 0 && i < rows && j >= 0 && j < columns){
         let neighborId = i.toString() + "-" + j.toString();
             if(minesLocation.includes(neighborId)){
           count++;
         }
       }
     }
-   }
-   return count;
+  }
+   const numberElement = document.createElement("span");
+   numberElement.className = "mine-number";
+   numberElement.textContent = count; 
+   
+   const colorIndex = count % numberColors.length;
+   numberElement.style.color = numberColors[colorIndex];//choose color from array by index
+   document.getElementById("board").appendChild(numberElement); 
+
+   return count; 
 }
+
+
+
 
 function revealMines(){
   for (let i = 0; i < rows; i++){

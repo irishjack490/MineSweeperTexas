@@ -3,6 +3,8 @@
 body {
     background-color: #c5d9ed;
     background-size: 100%;
+    background-image: url('https://i.imgur.com/NZP5X20.png')
+    
 }
 
 h1 {
@@ -42,3 +44,6 @@ button {
     
 }
 
+.mine-number {
+    color: blue;
+}
