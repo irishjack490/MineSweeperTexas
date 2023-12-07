@@ -17,6 +17,17 @@ The player must be able to do the following:
  
  Be given the option to start new game upon wining or losing previous game
 
+ Technologies used:
+ HTML
+ CSS
+ JavaScript
+
+ Resources:
+ Tim and Nabila
+ Geeks for Geeks
+ Overflow Stack
+ W3Schools 
+
  Pseudo Code:
 
  //Create a board with 8 rows, 8 columns, total of 64 same size boxes
