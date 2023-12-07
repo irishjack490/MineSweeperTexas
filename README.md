@@ -4,7 +4,8 @@ The game I have chosen for this project is Minesweeper. This is one of the first
 
 Minesweeper renders a table with multiple squares that may contain either a mine which ends the game, OR a number of the mines that could be in the area the player clicked on. The player must be careful not to click on a mine. If this is the case the game will be over. The player will win if they are able to click on all the squares that contain numbers only.
 
-![image](https://github.com/irishjack490/MineSweeperTexas/assets/146676274/680bae89-cb8d-4cec-a45a-b626e20d4eb2)
+![image](https://github.com/irishjack490/MineSweeperTexas/assets/146676274/f8dac2be-24f3-471d-84c2-773d892e75b5)
+
 
 
 
@@ -27,6 +28,7 @@ The player must be able to do the following:
 
  Resources:
  Tim and Nabila
+ GA Materials
  Geeks for Geeks
  Stack Overflow 
  W3Schools 
