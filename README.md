@@ -7,7 +7,7 @@ Minesweeper renders a table with multiple squares that may contain either a mine
 Below is a preliminary drawing of that the game would potentially look like the image below. Further design is under review, foe example, the smiley and the mines may end up being of a different color.
 
 
-![image](https://github.com/irishjack490/Project-1---Browser-Based-Game/assets/146676274/79f1df3b-7c06-4f3b-b6e5-3904299e13f8)
+![Alt text](image.png)
 
 
 The player must be able to do the following:
