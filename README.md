@@ -19,7 +19,7 @@ The player must be able to do the following:
 
  Pseudo Code:
 
- //Create a board with 8 rows, 8 columns, total of 64 same size boxes
+ //Create a board with 8 rows, 8 columns, total of 64 same size boxes.
 
  //Add code that generates 10 mines in random squares
  /Add code that displays a number for the adjacent mines, these must be non-visible until player clicks on the squares
@@ -34,3 +34,13 @@ The player must be able to do the following:
  //End game if player hits a mine
 
  //Set up button if player wants to play again  
+
+Link to the game: 
+
+What is next?
+
+I'd like to add 
+
+-Flag feature
+
+-Add more levels of difficulty where player can choose

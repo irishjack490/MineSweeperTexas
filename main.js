@@ -23,11 +23,10 @@ const row = Math.floor(Math.random () * rows);
 const column = Math.floor(Math.random ()* columns);
        let id = row.toString () + "-" + column.toString(); //setting coordinates for minesLocation
  if (!minesLocation.includes(id)){
-    minesLocation.push(id);
+    minesLocation.push(id); //push bomb into the coordinate
     minesRemaining += 1;
     }
-   }
-       
+   }     
  }
 
 //Create board with rows and columns with id div
