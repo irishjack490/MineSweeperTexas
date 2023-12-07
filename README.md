@@ -4,11 +4,11 @@ The game I have chosen for this projec this project is Minesweeper. This is one 
 
 Minesweeper renders a table with multiple squares that may contain either a mine which ends the game, OR a number of the mines that could be in the area the player clicked on. The player must be careful not to click on a mine. If this is the case the game will be over. The player will win if they are able to click on all the squares that contain numbers only.
 
-Below is a preliminary drawing of that the game would potentially look like the image below. Further design is under review, foe example, the smiley and the mines may end up being of a different color.
-
 
 ![Alt text](image.png)
 
+
+User Story
 
 The player must be able to do the following:
  Click on any square in the table 
@@ -34,3 +34,9 @@ The player must be able to do the following:
  //End game if player hits a mine
 
  //Set up button if player wants to play again  
+ 
+ What is next??
+
+ -Add flag feature
+
+ -Add difficulty levels people can choose from 
