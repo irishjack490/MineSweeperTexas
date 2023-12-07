@@ -25,7 +25,7 @@ The player must be able to do the following:
  Resources:
  Tim and Nabila
  Geeks for Geeks
- Overflow Stack
+ Stack Overflow 
  W3Schools 
 
  Pseudo Code:
@@ -50,4 +50,9 @@ The player must be able to do the following:
 
  -Add flag feature
 
+ -Add win game banner
+
  -Add difficulty levels people can choose from 
+
+ -Add sound effects
+ 
